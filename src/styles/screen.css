@@ -172,6 +172,7 @@ h6 u:after {
 @media (max-width: 767px) {
 	h1 {
 		font-size: 2em;
+		line-height: 48px;
 	}
 	h2 {
 		font-size: 1.8em;
@@ -188,15 +189,14 @@ h6 u:after {
 	h6 {
 		font-size: 1em;
 	}
-	h1, 
 	h2, 
 	h3 {
-		line-height: 64px;
+		line-height: 32px;
 	}
 	h4,
 	h5,
 	h6 {
-		line-height: 32px;
+		line-height: 24px;
 	}
 }
 
@@ -227,7 +227,6 @@ b {
 	font-weight: bold;
 }
 blockquote, cite {
-	font-weight: 200;
 	letter-spacing: 1px;
 }
 blockquote {
@@ -961,7 +960,6 @@ em small a svg {
 
 figure {
 	border: 1px solid transparent;
-	margin: 32px 0;
 	padding: 0;
 }
 figure img {
@@ -988,7 +986,6 @@ figure div {
 	padding-top: 0;
 	height: 0;
 	overflow: hidden;
-	z-index: 5;
 }
 figure div iframe {
 	position: absolute;
