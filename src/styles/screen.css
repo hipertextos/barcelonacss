@@ -1,5 +1,10 @@
-/* BarcelonaCSS */
-/* by Acozar/Miralles */
+/* BCN CSS Screen by Acózar 2019 (www.acozar.com) */
+
+/* Version 1.0 */
+/* General MIT License (MIT) */
+/* Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: */
+/* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. */
+/* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
 
 /* ------------------------------------------------------------ Resets */
 
@@ -17,19 +22,19 @@
 *:target,
 *:focus {
 	/*Transition*/ 
-	-webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-ms-transition: all .5s ease;
-	-o-transition: all .5s ease;
-	transition: all .5s ease;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
 }
 ::-moz-selection {
 	background-color: #dd0000;
-	color: rgba(255,255,255,1);
+	color: var(--color-white);
 }
 ::selection {
 	background-color: #dd0000;
-	color: rgba(255,255,255,1);
+	color: var(--color-white);
 }
 html {
 	font-family: sans-serif;
@@ -37,9 +42,9 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 body {
-	background-color: rgba(255,255,255,1);
-	color: rgba(0,0,0,1);
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+	background-color: var(--color-white);
+	color: var(--color-black);
+	font-family: var(--font-default);
 	font-size: 20px;
 	line-height: 32px;
 	-webkit-hyphens: auto;
@@ -85,7 +90,7 @@ svg,
 video {
 	max-width: 100%;
 }
-a, button, select, 
+a, button, select, label,
 input[type="submit"], 
 input[type="button"], 
 input[type="checkbox"], 
@@ -172,7 +177,6 @@ h6 u:after {
 @media (max-width: 767px) {
 	h1 {
 		font-size: 2em;
-		line-height: 48px;
 	}
 	h2 {
 		font-size: 1.8em;
@@ -189,14 +193,15 @@ h6 u:after {
 	h6 {
 		font-size: 1em;
 	}
+	h1, 
 	h2, 
 	h3 {
-		line-height: 32px;
+		line-height: 64px;
 	}
 	h4,
 	h5,
 	h6 {
-		line-height: 24px;
+		line-height: 32px;
 	}
 }
 
@@ -227,6 +232,7 @@ b {
 	font-weight: bold;
 }
 blockquote, cite {
+	font-weight: 200;
 	letter-spacing: 1px;
 }
 blockquote {
@@ -271,10 +277,10 @@ code {
 }
 code, 
 pre {
-	font-family; Monaco, Menlo, Consolas,'Courier New', monospace;
+	font-family; var(--font-code);
 }
 pre {
-	background: rgba(255,255,255,.5);
+	background: var(--color-translucentwhite);
 	border: 1px solid currentColor;
 	padding: 0 4px;
 	word-break: break-all;
@@ -370,6 +376,7 @@ select,
 textarea,
 [contenteditable="true"] {
 	background-color: transparent;
+	color: inherit;
 	font-size: 20px;
 	line-height: 32px;
 	position: relative;
@@ -377,32 +384,33 @@ textarea,
 button,
 input,
 textarea {
-	background-color: rgba(255,255,255,.5);
+	background-color: var(--color-translucentwhite);
 }
 
 /* Input */
 
 input,
 select {
+	border: 2px solid currentColor;
 	height: 32px;
+	outline: none;
 	padding: 0 16px;
 }
 input:invalid {
-	border: 1px solid currentColor;
-	color: rgba(0,0,0,1);
+	color: var(--color-red);
 }
 input[type=radio] {
 	border-radius: 50%;
 }
 input[type=radio]:checked, 
 input[type=checkbox]:checked {
-	color: rgba(50,164,89,1);
+	color: var(--color-green);
 }
 input[type=range] {
 	border-color: transparent;
 }
 input[type=submit] {
-	background: rgba(255,255,255,.5);
+	background: var(--color-translucentwhite);
 }
 
 /* Form & fieldset */
@@ -428,39 +436,29 @@ progress, meter {
 }
 progress::-webkit-progress-bar,
 meter::-webkit-meter-bar {  
-	background: rgba(150,150,150,1);
+	background: var(--color-grey);
 }  
 progress::-webkit-progress-value {  
-	background: rgba(50,122,174,1);
+	background: var(--color-blue);
 }
 meter::-webkit-meter-optimum-value {  
-	background: rgba(50,164,89,1);
+	background: var(--color-green);
 }
 progress::-moz-progress-bar {  
-	background: rgba(0,0,0,1);
+	background: var(--color-black);
 }
 meter::-moz-meter-bar {  
-	background: rgba(50,164,89,1);
+	background: var(--color-green);
 }
 
 /* Select */
 
 select {
-	background-color: transparent;
-	border: 1px solid currentColor;
+	background-color: rgba(255,255,255,.2);
+	border: 2px solid currentColor;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }
-select:after {
-	border: 1px solid currentColor;
-	color: inherit;
-	content: "+";
-	font-weight: bold;
-	display: inline;
-	margin-left: 1em;
-	padding: 0 .4em;
-}
-option {}
 optgroup {}
 textarea {
 	border: 1px solid currentColor;
@@ -476,13 +474,13 @@ input:focus,
 textarea:focus,
 [contenteditable="true"]:focus {
 	border-radius: 4px;
-	box-shadow: inset 0 0 0.25em rgba(0,0,255,0.1), 0 0 .15em rgba(50,122,174,1);
+	box-shadow: inset 0 0 0.25em rgba(0,0,0,.1);
 	color: inherit;
 	outline: 0;
 }
 [contenteditable="true"]:focus:before {
 	content:'\270E';
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+	font-family: var(--font-default);
 	font-size: 32px;
 	position: absolute;
 	top: 0; right: 2px;
@@ -491,9 +489,9 @@ textarea:focus,
 /* Input and emphatic info */
 
 input + em {
-	background: rgba(0,0,0,.5);
+	background: var(--color-translucentblack);
 	border: 1px solid currentColor;
-	color: rgba(255,255,255,1);
+	color: var(--color-white);
 	margin-left: -1px;
 	padding: calc(3 * 1px) 16px;
 }
@@ -514,7 +512,7 @@ strong input[type=radio] + label:before {
 	font-size: 32px;
 	font-weight: bold;
 	height: 30px;
-	margin: 0 1em 0 0;
+	margin: 0 1em 0;
 	width: 30px;
 }
 strong input {
@@ -536,40 +534,46 @@ strong [type=radio] + label {
 strong input:focus {
 	border-left: 5px solid currentColor;
 	box-shadow: none;
-	color: rgba(50,164,89,1);
+	color: var(--color-green);
 }
 strong input:focus + label {
-	color: rgba(50,164,89,1);
+	color: var(--color-green);
 }
 strong input[type=radio] + label:before {
 	border-radius: 50%;
 }
 strong input[type=checkbox]:checked + label,
 strong input[type=radio]:checked + label {
-	color: rgba(50,164,89,1);
+	color: var(--color-green);
 }
 strong input[type=checkbox]:checked + label:before,
 strong input[type=radio]:checked + label:before {
-	border: 2px solid rgba(50,164,89,1);
-	color: rgba(50,164,89,1);
+	border: 2px solid var(--color-green);
+	color: var(--color-green);
 	content: '\2713';
 }
 strong select {
+	font-weight: bold;
 	height: 64px;
 	width: 100%;
 }
 
 /* Switcher */
 
+[data-mode=switcher] {
+	display: block;
+	padding: 0 1em;
+	width: 64px;
+}
 [data-mode=switcher] [type=checkbox] + label,
 [data-mode=switcher] [type=checkbox] + label span {
-	border: 1px solid currentColor;
+	border: 2px solid currentColor;
 	border-radius: 32px;
 	cursor: pointer;
 	display: block;
 	float: left;
 	height: 32px;
-	margin-right: 1em;
+	margin: -2px 1em 0 -2px;
 	padding: 0;
 	width: 64px;
 }
@@ -582,8 +586,8 @@ strong select {
 	width: 32px;
 }
 [data-mode=switcher] [type=checkbox]:checked + label {
-	background-color: rgba(50,164,89,1);
-	color: rgba(50,164,89,1);
+	background-color: var(--color-green);
+	color: var(--color-green);
 }
 [data-mode=switcher] [type=checkbox]:checked + label span {
 	margin-left: 32px;
@@ -621,14 +625,14 @@ col,
 colgroup,
 thead, 
 tfoot {
-	background-color: rgba(255,255,255,.5);
+	background-color: var(--color-translucentwhite);
 }
 td, th {
 	border-bottom: 1px solid currentColor;
 	padding: 0 15px;
 }
 th { 
-	background: rgba(255,255,255,.5);
+	background: var(--color-translucentwhite);
 	font-weight: bold;
 }
 
@@ -641,7 +645,6 @@ em a,
 em label,
 em button,
 em div a {
-	background: rgba(255,255,255,.5);
 	border: 1px solid currentColor;
 	cursor: pointer;
 	display: inline;
@@ -720,7 +723,6 @@ strong em button {
 
 
 nav {
-	background-color: ;
 	border-bottom: 1px solid currentColor;
 	display: block;
 	line-height: 32px;
@@ -732,7 +734,6 @@ nav label {
 	border: 1px solid transparent;
 	display:inline;
 	display: inline-block;
-	font-weight: bold;
 	padding: 15px;
 	text-decoration: none;
 }
@@ -741,10 +742,6 @@ article > nav label,
 aside > nav a,
 aside > nav label {
 	border-color: currentColor;
-}
-nav a:hover,
-nav label:hover {
-	text-decoration: underline;
 }
 nav ul {
 	border: 1px solid transparent;
@@ -779,9 +776,9 @@ nav form {
 	display: block;
 	position: absolute;
 	text-align: right;
-	top: 15px;
+	top: 16px;
 	right: 0;
-	width: 8em;
+	width: auto;
 	z-index: 2;
 }
 nav li form {
@@ -791,33 +788,36 @@ nav li form {
 }
 nav form input,
 nav form input:focus {
-	background-color: rgba(255,255,255,1);
+	border: 2px solid currentColor;
 	border-radius: 20px;
+	color: inherit;
 	position: relative;
 	text-align: center;
 }
 nav form input[type=text] {
-	width: 5em;
+	width: 96px;
 }
 nav form input[type=text]:focus {
 	background-color: rgba(255,255,255,1);
-	color: rgba(0,0,0,1);
-	width: 100%;
+	color: #000000;
+	width: 320px;
 	z-index: 9;
 }
 nav form input[type=submit] {
-	background: rgba(255,255,255,1);
-	border: 2px solid currentColor;
-	color: rgba(150,150,150,1);
 	display: none;
-	height: 42px; 	
-	line-height: 32px; 	
-	margin-left: -2.25em;
-	padding: 0 15px;
+	height: 32px; 
+	width: 32px;
+	line-height: 28px; 	
+	padding: 0;
+	position: absolute;
+	right: 0;
 	z-index: 10;
 }
 nav form input:focus ~ input[type=submit] {
-	display: inline-block;
+	display: inline;
+}
+nav form input:focus ~ not(nav form input) {
+	opacity: .1;
 }
 nav label {
 	cursor: pointer;
@@ -856,19 +856,24 @@ article > div,
 aside > div,
 dialog > div,
 section > div {
-	border: 1px solid transparent;
+	border: thin solid transparent;
 	clear: both;
 	padding: 30px 0 15px;
 	position: relative;
 }
+dialog > div {
+	margin: 0 auto;
+	max-width: 1000px;
+	max-width: var(--page-size);
+}
 header {
-	border-bottom: 1px solid currentColor;
+	border-bottom: thin solid currentColor;
 }
 footer {
-	border-top: 1px solid currentColor;
+	border-top: thin solid currentColor;
 }
 article, aside {
-	border: 1px solid currentColor;
+	border: thin solid currentColor;
 }
 #site-header > div,
 #page-header > div,
@@ -879,10 +884,10 @@ article, aside {
 #page-footer > div,
 [id*='page-section'] > div {
 	margin: 0 auto;
-	padding: 0 16px;
 	position: relative;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1000px;
+	max-width: var(--page-size);
 }
 dialog header,
 dialog > div,
@@ -899,9 +904,13 @@ section footer {
 	padding-left: 7px;
 	padding-right: 7px;
 }
+#page-header > div {
+	padding-top: 32px;
+}
 #page-footer {
-	background-color: rgba(0,0,0,1);
-	color: rgba(255,255,255,1);
+	background-color: var(--color-black);
+	color: var(--color-white);
+	padding-bottom: 64px;
 }
 
 /* ------------------------------------------------------------ Media */
@@ -934,9 +943,8 @@ h5 img,
 h5 svg,
 h6 img,
 h6 svg {
-	float: left;
 	height: 64px;
-	margin: -.5em 32px .5em 0;
+	margin: 0 auto -16px;
 	width: 64px;
 }
 em a img,
@@ -960,6 +968,7 @@ em small a svg {
 
 figure {
 	border: 1px solid transparent;
+	margin: 32px 0;
 	padding: 0;
 }
 figure img {
@@ -967,25 +976,26 @@ figure img {
 	width: 100%;
 }
 figure figcaption {
-	background: rgba(0,0,0,1);
-	color: rgba(255,255,255,1);
 	line-height: 32px;
 	text-align: center;
 	padding: 4px;
 	position: absolute;
 	bottom: 0; left: 0; right: 0;
+	text-decoration: none !important;
 }
 
 /* Video */
 
 figure div {
-	clear: both;
+	border-radius: 4px;
+	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.6);
 	margin-bottom: 1;
 	position: relative;
 	padding-bottom: 56.25%;
 	padding-top: 0;
 	height: 0;
 	overflow: hidden;
+	z-index: 5;
 }
 figure div iframe {
 	position: absolute;
@@ -999,7 +1009,8 @@ figure div iframe {
 
 /* Links */
 
-a:hover, a:active, a:visited {
+a:hover, a:active, a:visited, a:visited:hover {
+	border-color: currentColor;
 	text-decoration: underline;
 	-moz-opacity: 0.9;
 	opacity: 0.9;
@@ -1015,144 +1026,232 @@ a:before,
 nav a:not(:hover) {
 	text-decoration: none !important;
 }
+em a,
+em label,
+em button,
+nav a,
+nav label,
+.menu label,
+.tabs label {
+	box-shadow: inset 0 0px 0px rgba(0,0,0,.1);
+}
+em a:hover,
+em label:hover,
+em button:hover,
+em a:visited:hover,
+nav a:hover,
+nav label:hover,
+.menu label:hover,
+.tabs label:hover {
+	box-shadow: inset 0 0 0 5em rgba(255,255,255,.1);
+}
+em a:active,
+em label:active,
+em button:active,
+nav a:active,
+nav label:active,
+.menu label:active,
+.tabs label:active {
+	box-shadow: inset 0 0 0 .05em currentColor;
+}
 
 /* ------------------------------------------------------------ Skin */
 
 /* Light theme (default) */
 
 #page {
-	background: rgba(255,255,255,1);
-	color: rgba(0,0,0,1);
+	background: var(--color-white);
+	color: var(--color-softblack);
 }
 a {
-	color: rgba(50,122,174,1);
+	color: var(--color-hardgrey);
 }
 a:visited,
 em a:visited {
-	color: rgba(221,0,0,1);
+	color: var(--color-grey);
 }
-a:visited svg {
-	fill: rgba(221,0,0,1);
-}
-nav label:hover,
 a:hover,
 a:visited:hover,
 em button:hover,
 em label:hover {
-	color: rgba(50,122,174,1);
-}
-a:hover svg {
-	fill: rgba(50,122,174,1);
+	color: var(--color-grey);
 }
 a:active,
 a:visited:active {
-	color: rgba(115,44,147,1);
-}
-a:visited:active svg {
-	fill: rgba(115,44,147,1);
-}
-nav a:hover,
-nav label:hover {
-	border: 1px solid currentColor;
+	color: var(--color-black);
 }
 
-/* Soft theme */
+/* Meridianus theme */
 
-#theme-soft:checked ~ #page,
-#theme-soft:checked ~ #site-nav,
-#theme-soft:checked ~ #page-nav {
-	background-color: rgba(247,246,255,1);
-	color: rgba(89,81,147,1);	
+#theme-meridianus:checked ~ #page,
+#theme-meridianus:checked ~ #site-nav,
+#theme-meridianus:checked ~ #page-nav,
+#theme-meridianus:checked ~ div > dialog {
+	background-color: var(--color-bgmeridianus);
+	color: var(--color-textmeridianus);	
 }
-#theme-soft:checked ~ #page a {
-	color: rgba(100,100,255,1);	
+#theme-meridianus:checked ~ #page a {
+	color: var(--color-textmeridianus);	
 }
-#theme-soft:checked ~ #page em a,
-#theme-soft:checked ~ #page em label,
-#theme-soft:checked ~ #page em button {
-	background-color: rgba(214,208,255,1);
-	color: rgba(89,81,147,1);	
+#theme-meridianus:checked ~ #page em a,
+#theme-meridianus:checked ~ #page em label,
+#theme-meridianus:checked ~ #page em button {
+	background-color: var(--color-textmeridianus);
+	color: var(--color-white);	
 }
-#theme-soft:checked ~ #page a:visited,
-#theme-soft:checked ~ #page em a:visited {
-	color: rgba(244,82,15,1);
+#theme-meridianus:checked ~ #page a:visited,
+#theme-meridianus:checked ~ #page em a:visited {
+	color: var(--color-textmeridianus);
 }
-#theme-soft:checked ~ #page a:visited svg {
-	fill: rgba(221,0,0,1);
+#theme-meridianus:checked ~ #page label:hover,
+#theme-meridianus:checked ~ #page button:hover,
+#theme-meridianus:checked ~ #page a:hover,
+#theme-meridianus:checked ~ #page a:visited:hover {
+	color: var(--color-starredmeridianus);
 }
-#theme-soft:checked ~ #page nav label:hover,
-#theme-soft:checked ~ #page a:hover,
-#theme-soft:checked ~ #page a:visited:hover {
-	color: rgba(50,122,174,1);
+#theme-meridianus:checked ~ #page a:active,
+#theme-meridianus:checked ~ #page a:visited:active {
+	color: var(--color-textmeridianus);
 }
-#theme-soft:checked ~ #page a:hover svg {
-	fill: rgba(50,122,174,1);
-}
-#theme-soft:checked ~ #page a:active,
-#theme-soft:checked ~ #page a:visited:active {
-	color: rgba(115,44,147,1);
-}
-#theme-soft:checked ~ #page a:visited:active svg {
-	fill: rgba(115,44,147,1);
-}
-#theme-soft:checked ~ #page nav a:hover,
-#theme-soft:checked ~ #page nav label:hover {
-	background-color: rgba(255,255,255,.5);
+#theme-meridianus:checked ~ #page nav a:hover,
+#theme-meridianus:checked ~ #page nav label:hover {
+	background-color: var(--color-translucentwhite);
 }
 
-/* Dark theme */
+/* vesperum theme */
 
-#theme-dark:checked ~ #page,
-#theme-dark:checked ~ #site-nav,
-#theme-dark:checked ~ #page-nav {
-	background-color: rgba(10,10,10,1);
-	color: rgba(255,255,255,1);	
+#theme-vesperum:checked ~ #page,
+#theme-vesperum:checked ~ #site-nav,
+#theme-vesperum:checked ~ #page-nav,
+#theme-vesperum:checked ~ div > dialog {
+	background-color: var(--color-bgvesperum);
+	color: var(--color-textvesperum);	
 }
-#theme-dark:checked ~ #page a {
-	color: rgba(255,255,255,1);	
+#theme-vesperum:checked ~ #page a {
+	color: var(--color-textvesperum);	
 }
-#theme-dark:checked ~ #page em a,
-#theme-dark:checked ~ #page em label,
-#theme-dark:checked ~ #page em button {
-	background-color: rgba(90,90,90,1);
-	color: rgba(220,220,220,1);	
+#theme-vesperum:checked ~ #page em a,
+#theme-vesperum:checked ~ #page em label,
+#theme-vesperum:checked ~ #page em button {
+	background-color: var(--color-textvesperum);
+	color: var(--color-white);	
 }
-#theme-dark:checked ~ #page a:visited,
-#theme-dark:checked ~ #page em a:visited {
-	color: rgba(244,82,15,1);
+#theme-vesperum:checked ~ #page a:visited,
+#theme-vesperum:checked ~ #page em a:visited {
+	color: var(--color-textvesperum);
 }
-#theme-dark:checked ~ #page a:visited svg {
-	fill: rgba(221,0,0,1);
+#theme-vesperum:checked ~ #page label:hover,
+#theme-vesperum:checked ~ #page button:hover,
+#theme-vesperum:checked ~ #page a:hover,
+#theme-vesperum:checked ~ #page a:visited:hover {
+	color: var(--color-starredvesperum);
 }
-#theme-dark:checked ~ #page nav label:hover,
-#theme-dark:checked ~ #page a:hover,
-#theme-dark:checked ~ #page a:visited:hover {
-	color: rgba(255,255,255,1);
+#theme-vesperum:checked ~ #page a:active,
+#theme-vesperum:checked ~ #page a:visited:active {
+	color: var(--color-starredvesperum);
 }
-#theme-dark:checked ~ #page a:hover svg {
-	fill: rgba(255,255,255,1);
-}
-#theme-dark:checked ~ #page a:active,
-#theme-dark:checked ~ #page a:visited:active {
-	color: rgba(115,44,147,1);
-}
-#theme-dark:checked ~ #page a:visited:active svg {
-	fill: rgba(115,44,147,1);
-}
-#theme-dark:checked ~ #page nav a:hover,
-#theme-dark:checked ~ #page nav label:hover {
-	background-color: rgba(255,255,255,.5);
+#theme-vesperum:checked ~ #page nav a:hover,
+#theme-vesperum:checked ~ #page nav label:hover {
+	background-color: var(--color-translucentwhite);
 }
 
-/* Emphatic link colors (important reset) */
+/* Nox theme */
 
-em a,
-em label, 
-em button,
-em a:visited,
-nav a,
-nav label {
-	color: inherit;
+#theme-nox:checked ~ #page,
+#theme-nox:checked ~ #site-nav,
+#theme-nox:checked ~ #page-nav,
+#theme-nox:checked ~ div > dialog {
+	background-color: var(--color-softblack);
+	color: var(--color-white);	
+}
+#theme-nox:checked ~ #page a {
+	color: var(--color-white);	
+}
+#theme-nox:checked ~ #page em a,
+#theme-nox:checked ~ #page em label,
+#theme-nox:checked ~ #page em button {
+	background-color: var(--color-black);
+	color: var(--color-softgrey);	
+}
+#theme-nox:checked ~ #page a:visited,
+#theme-nox:checked ~ #page em a:visited {
+	color: var(--color-grey);
+}
+#theme-nox:checked ~ #page label:hover,
+#theme-nox:checked ~ #page button:hover,
+#theme-nox:checked ~ #page a:hover,
+#theme-nox:checked ~ #page a:visited:hover {
+	color: var(--color-softgrey);
+}
+#theme-nox:checked ~ #page a:active,
+#theme-nox:checked ~ #page a:visited:active {
+	color: var(--color-grey);
+}
+#theme-nox:checked ~ #page nav a:hover,
+#theme-nox:checked ~ #page nav label:hover {
+	background-color: var(--color-translucentwhite);
+}
+
+/* Page grid 
+#page {
+	background-image: linear-gradient(to bottom, cyan 0, rgba(255, 255, 255, 0) 1px);
+	background-repeat: repeat-y;
+	background-size: 100% 16px;
+}
+*/
+
+
+/* Root variables */
+
+:root {
+	/* Page Width */
+	--page-size: 1200px;
+	
+	/* Soft Colors */
+	--color-softyellow: rgba(253,242,208,1);
+	--color-softorange: rgba(248,228,211,1);
+	--color-softred: rgba(238,213,213,1);
+	--color-softmagenta: rgba(224,204,216,1);
+	--color-softviolet: rgba(228,220,238,1);
+	--color-softblue: rgba(209,234,249,1);
+	--color-softturquoise: rgba(228,238,238,1);
+	--color-softgreen: rgba(220,244,228,1);
+	
+	/* Colors */
+	--color-yellow: rgba(244,192,21,1);
+	--color-orange: rgba(204,119,34,1);
+	--color-red: rgba(168,47,47,1);
+	--color-magenta: rgba(102,2,60,1);
+	--color-violet: rgba(120,81,169,1);
+	--color-blue: rgba(23,148,227,1);
+	--color-turquoise: rgba(122,172,172,1);
+	--color-green: rgba(80,200,120,1);
+
+	/* B & W */
+	--color-white: rgba(255,255,255,1);
+	--color-softgrey: rgba(230,230,230,1);
+	--color-grey: rgba(150,150,150,1);
+	--color-hardgrey: rgba(90,90,90,1);
+	--color-softblack: rgba(60,60,60,1);
+	--color-black: rgba(0,0,0,1);
+	
+	/* Meridianus Theme */
+	--color-bgmeridianus: rgba(248,228,211,1);
+	--color-textmeridianus: rgba(204,119,34,1);
+	--color-starredmeridianus: rgba(168,47,47,1);
+	
+	/* vesperum Theme */
+	--color-bgvesperum: rgba(228,220,238,1);
+	--color-textvesperum: rgba(120,81,169,1);
+	--color-starredvesperum: rgba(102,2,60,1);
+	
+	/* Overlays */
+	--color-translucentblack: rgba(0,0,0,.5);
+	--color-translucentwhite: rgba(255,255,255,.4);
+		
+	/* Font stacks */
+	--font-default: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+	--font-code: Monaco, Menlo, Consolas,'Courier New', monospace;
 }
 	
 /* The end */

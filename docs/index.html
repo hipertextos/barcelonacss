@@ -3,58 +3,69 @@
 	<head>
 		<meta charset="utf-8">
 		<!-- Metadata -->
-		<title>BarcelonaCSS: Main</title>
+		<title>BCN CSS: Main</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Pure CSS Framework, extremely lightweight, from Barcelona">
-		<meta name="keywords" content="CSS semantic components library">
-		<meta name="author" content="hipertextos">
+		<meta name="description" content="Revolutionary CSS framework with no more classes!">
+		<meta name="keywords" content="CSS semantic component library">
+		<meta name="author" content="Acózar">
+		
 		<!-- Metadata: GeoTags -->
-		<meta name="geo.region" content="PageRegion">
-		<meta name="geo.placename" content="PagePlacename">
-		<meta name="geo.position" content="PageLangitudeLongitude">
-		<meta name="ICBM" content="PageLangitudeLongitude">
+		<meta name="geo.region" content="Catalunya">
+		<meta name="geo.placename" content="Barcelona">
+		<meta name="geo.position" content="41.426812,2.234972">
+		<meta name="ICBM" content="41.426812;2.234972">
+		
 		<!-- Screen styles -->
 		<link href="../src/styles/screen.css" rel="stylesheet" media="screen">
 		<link href="../src/styles/components.css" rel="stylesheet" media="screen">
 		<link href="../src/styles/helpers.css" rel="stylesheet" media="screen">
+		
 		<!-- Print styles -->
 		<link href="../src/styles/print.css" rel="stylesheet" media="print">
+		
 		<!-- If iexplorer :( -->
 		<!--[if lt IE 9]><script src="../src/styles/html5shiv.js"></script><![endif]-->
 		<!--[if IE]><link rel="stylesheet" type="text/css" href="../src/styles/iexplorer.css" /><![endif]-->
-		<!-- If JS disabled -->
+	
+		<!-- No Script styles -->		
 		<noscript><link href="../src/styles/noscript.css" rel="stylesheet" media="screen"></noscript>
+		
 		<!-- Site Feed -->
 		<link rel="alternate" type="application/rss+xml" title="rss" href="FeedUrl">
+		
 		<!-- Page Icons -->
-		<link rel="apple-touch-icon" sizes="180x180" href="../src/ics/apple-touch-icon.png">
-		<link rel="icon" type="image/png" href="../src/ics/favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="../src/ics/favicon-16x16.png" sizes="16x16">
-		<link rel="manifest" href="../src/ics/manifest.json">
-		<link rel="mask-icon" href="../src/ics/safari-pinned-tab.svg" color="#dd0000">
-		<link rel="shortcut icon" href="../src/ics/favicon.ico">
-		<meta name="msapplication-config" content="../src/ics/browserconfig.xml">
+		<link rel="apple-touch-icon" sizes="180x180" href="../src/bcnics/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../src/bcnics/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../src/bcnics/favicon-16x16.png">
+		<link rel="manifest" href="../src/bcnics/site.webmanifest">
+		<link rel="mask-icon" href="../src/bcnics/safari-pinned-tab.svg" color="#777777">
+		<link rel="shortcut icon" href="../src/bcnics/favicon.ico">
+		<meta name="msapplication-TileColor" content="#eeeeee">
+		<meta name="msapplication-config" content="../src/bcnics/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
+		
 	</head>
 	<body>
 				
 		<!-- Theme inputs (invisibles) -->		
-		<input type="radio" id="theme-light" name="theme" aria-hidden="true" hidden>
-		<input type="radio" id="theme-soft" name="theme" aria-hidden="true" hidden>
-		<input type="radio" id="theme-dark" name="theme" aria-hidden="true" hidden> 
+		<input type="radio" id="theme-nox" name="theme" aria-hidden="true" hidden>
+		<input type="radio" id="theme-vesperum" name="theme" aria-hidden="true" hidden>
+		<input type="radio" id="theme-meridianus" name="theme" aria-hidden="true" hidden>
+		<input type="radio" id="theme-aurora" name="theme" aria-hidden="true" hidden> 
 		
 		<!-- Page content -->		
 		<div id="page" class="page">
 			<nav id="site-nav" class="nav-smart">
 				<div>
-					<a class="site-logo" href="index.html" title="BarcelonaCSS: Main">
-						<img src="../src/ics/android-chrome-192x192.png" alt="BarcelonaCSS logo">
+					<a class="site-logo" href="http://acozar.github.io/bcncss/" title="Barcelona CSS">
+						<img src="../src/bcnics/icon-bcn.png" alt="BCN CSS">
 					</a>
 					<input type="checkbox" id="mobnav" name="mobnav" aria-hidden="true" hidden> 
 					<strong><label for="mobnav">Menú<mark></mark></label></strong>
 					<div hidden>
-						<a href="index.html" title="BarcelonaCSS">BarcelonaCSS</a>
+						<a href="index.html" title="BCNcss">BCNCSS</a>
 						<a href="styles.html" title="Styles">Styles</a>
+						<a href="grids.html" title="Grids">Grids</a>
 						<a href="layouts.html" title="Layouts">Layouts</a>
 						<a href="components.html" title="Components">Components</a>
 						<a href="extras.html" title="Extras">Extras</a>
@@ -69,7 +80,7 @@
 			<header id="page-header" class="banner" style="background-image: url('../src/img/picture-15.jpg')">
 				<div>
 					<h1>
-					 	BarcelonaCSS 
+					 	BCNCSS 
 					 </h1>
 					 <p>rediscovering Cascade Style Sheets</p>
 				</div>
@@ -77,43 +88,44 @@
 			
 			<header class="sticky-header">
 				<div>
-					<h2>BarcelonaCSS: presentation</h2>
+					<h2>BCNCSS: presentation</h2>
 				</div>
 			</header>
 			
 			<main id="page-main">
 				<div>
-					<pre contentEditable="true">&lt;link href=&quot;barcelonacss.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;</pre>
+					<pre contentEditable="true">&lt;link href=&quot;../source/styles.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;</pre>
 					<hr>
-				</div>
-				<div class="gallery">
-					<article>
-						<h3>Clean HTML</h3>
-						<strong>No classitis</strong>
-						<div><p>Just 1800 lines of CSS <br>(uncompressed)</p></div>
-					</article>
-					<article>
-						<h3>Lightweight pages</h3>
-						<strong>No javascript</strong>
-						<div><p>Transportable from Markdown</p></div>
-					</article>
-					<article>
-						<h3>Simple framework</h3>
-						<strong>No dependencies</strong>
-						<div><p>HTML for content, CSS for design. No more needed. </p></div>
-					</article>
-					<article>
-						<h3>Easy & Useful</h3>
-						<strong>All features</strong>
-						<div><p>Lots of components and possibilities.</p></div>
-					</article>
-					<hr>
+					<h3><u>Philosophy</u></h3>
+					<div class="flex-grid-2 text-center">
+						<section class="bg-color-green">
+							<h4>HTML = &lt;Content&gt;</h4>
+							<b>No more dirty HTML!</b>
+							<p>Transportable from Markdown</p>
+						</section>
+						<section class="bg-color-yellow">
+							<h4>CSS = { Design }</h4>
+							<b>No more massive libraries!</b>
+							<p>Just 2000 lines of CSS (uncompressed)</p>
+						</section>
+						<section class="bg-color-violet">
+							<h4>Javascript: none</h4>
+							<strong>No more dependencies!</strong>
+							<p>All features.</p>
+						</section>
+						<section class="bg-color-red">
+							<h4>Just one class!</h4>
+							<strong>1 Class = 1 Component</strong>
+							<p>No more needed.</p>
+						</section>
+						<hr>
+					</div>
 				</div>
 			</main>			
 			
 			<header class="sticky-header">
 				<div>
-					<h2>BarcelonaCSS: stylesheets</h2>
+					<h2>BCNcss: stylesheets</h2>
 				</div>
 			</header>
 			<hr>
@@ -122,10 +134,10 @@
 					<h4><u>3 combinable stylesheets + your customizable skin</u></h4>
 					<pre contentEditable="true">
 &lt;!-- Screen styles --&gt;
-&lt;link href=&quot;barcelonacss/src/styles/screen.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
-&lt;link href=&quot;barcelonacss/src/styles/components.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
-&lt;link href=&quot;barcelonacss/src/styles/helpers.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
-&lt;link href=&quot;barcelonacss/src/styles/skin.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+&lt;link href=&quot;../src/styles/screen.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+&lt;link href=&quot;../src/styles/components.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+&lt;link href=&quot;../src/styles/helpers.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+&lt;link href=&quot;../src/styles/skin.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
 					</pre>
 					<hr>
 				</div>
@@ -133,7 +145,7 @@
 			<hr>
 			<header class="sticky-header">
 				<div>
-					<h2>BarcelonaCSS: builds</h2>
+					<h2>BCNCSS: builds</h2>
 				</div>
 			</header>
 			<hr>
@@ -141,42 +153,22 @@
 				<div>
 					<h4><u>CSS base</u></h4>
 					<pre contentEditable="true">
-&lt;link href=&quot;barcelonacss/src/styles/screen.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+&lt;link href=&quot;../src/styles/screen.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
 					</pre>
 					<hr>
 					<h4><u>CSS base + components</u></h4>
 					<pre contentEditable="true">
-&lt;link href=&quot;barcelonacss/src/styles/screen.components.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
-					</pre>
-					<hr>
-					<h4><u>CSS + helpers</u></h4>
-					<pre contentEditable="true">
-&lt;link href=&quot;barcelonacss/src/styles/screen.helpers.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
-					</pre>
-					<hr>
-					<h4><u>CSS base + components + helpers</u></h4>
-					<pre contentEditable="true">
-&lt;link href=&quot;barcelonacss/src/styles/screencomponents.helpers.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+&lt;link href=&quot;../src/styles/screen.components.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
 					</pre>
 					<hr>
 					<h4><u>CSS base (min)</u></h4>
 					<pre contentEditable="true">
-&lt;link href=&quot;barcelonacss/src/styles/screen.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+&lt;link href=&quot;../src/styles/screen.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
 					</pre>
 					<hr>
 					<h4><u>CSS base + components (min)</u></h4>
 					<pre contentEditable="true">
-&lt;link href=&quot;barcelonacss/src/styles/screen.components.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
-					</pre>
-					<hr>
-					<h4><u>CSS + helpers (min)</u></h4>
-					<pre contentEditable="true">
-&lt;link href=&quot;barcelonacss/src/styles/screen.helpers.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
-					</pre>
-					<hr>
-					<h4><u>CSS base + components + helpers (min)</u></h4>
-					<pre contentEditable="true">
-&lt;link href=&quot;barcelonacss/src/styles/screen.components.helpers.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+&lt;link href=&quot;../src/styles/screen.components.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
 					</pre>
 					<hr>
 				</div>
@@ -184,7 +176,7 @@
 
 			<footer id="page-footer">
 				<div>
-					<p><a href="http://barcelonacss.github.io" title="BarcelonaCSS">BarcelonaCSS</a> by Acózar/Miralles, 2017. Distributed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. </p>
+					<p>© <a href="http://acozar.com" title="Acózar">Acózar</a> 2018. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. </p>
 
 				</div>
 			</footer>
@@ -196,15 +188,16 @@
 		
 		<!-- Tools switcher -->  		
   		<div id="tools-switcher">
-  			<label for="tools-check" data-title="Tools" class="pophover">+</label>
+  			<label for="tools-check" data-title="Themes" class="pophover">&#9673;</label>
   		</div>
 		<!-- Tools nav -->
 		<input type="checkbox" id="tools-check" name="tools" aria-hidden="true" hidden>
 		<nav id="tools-nav">
-			<label for="tools-check" id="label-tools" data-title="Close" class="pophover">x</label>
-			<label for="theme-dark" id="label-dark" data-title="Dark theme" class="pophover"></label>
-			<label for="theme-soft" id="label-soft" data-title="Soft theme" class="pophover"></label>
-			<label for="theme-light" id="label-light" data-title="Light theme" class="pophover"></label>
+			<label for="tools-check" id="label-tools" data-title="Close" class="pophover">&#215;</label>
+			<label for="theme-nox" id="label-nox" data-title="Nox" class="pophover"></label>
+			<label for="theme-vesperum" id="label-vesperum" data-title="vesperum" class="pophover"></label>
+			<label for="theme-meridianus" id="label-meridianus" data-title="Meridianus" class="pophover"></label>
+			<label for="theme-aurora" id="label-aurora" data-title="Aurora" class="pophover"></label>
 		</nav>	
 
 		<!-- Scripts

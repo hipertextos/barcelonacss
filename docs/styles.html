@@ -3,56 +3,69 @@
 	<head>
 		<meta charset="utf-8">
 		<!-- Metadata -->
-		<title>BarcelonaCSS: Styles</title>
+		<title>BCN CSS: Styles</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Revolutionary CSS framework with no more classes!">
 		<meta name="keywords" content="CSS semantic component library">
-		<meta name="author" content="hipertextos">
+		<meta name="author" content="Acózar">
+		
 		<!-- Metadata: GeoTags -->
-		<meta name="geo.region" content="PageRegion">
-		<meta name="geo.placename" content="PagePlacename">
-		<meta name="geo.position" content="PageLangitudeLongitude">
-		<meta name="ICBM" content="PageLangitudeLongitude">
+		<meta name="geo.region" content="Catalunya">
+		<meta name="geo.placename" content="Barcelona">
+		<meta name="geo.position" content="41.426812,2.234972">
+		<meta name="ICBM" content="41.426812;2.234972">
+		
 		<!-- Screen styles -->
-		<link href="../src/styles/screen.components.helpers.min.css" rel="stylesheet" media="screen">
+		<link href="../src/styles/screen.css" rel="stylesheet" media="screen">
+		<link href="../src/styles/components.css" rel="stylesheet" media="screen">
+		<link href="../src/styles/helpers.css" rel="stylesheet" media="screen">
+		
 		<!-- Print styles -->
 		<link href="../src/styles/print.css" rel="stylesheet" media="print">
+		
 		<!-- If iexplorer :( -->
 		<!--[if lt IE 9]><script src="../src/styles/html5shiv.js"></script><![endif]-->
 		<!--[if IE]><link rel="stylesheet" type="text/css" href="../src/styles/iexplorer.css" /><![endif]-->
-		<!-- If JS disabled -->
+	
+		<!-- No Script styles -->		
 		<noscript><link href="../src/styles/noscript.css" rel="stylesheet" media="screen"></noscript>
+		
 		<!-- Site Feed -->
 		<link rel="alternate" type="application/rss+xml" title="rss" href="FeedUrl">
+		
 		<!-- Page Icons -->
-		<link rel="apple-touch-icon" sizes="180x180" href="../src/ics/apple-touch-icon.png">
-		<link rel="icon" type="image/png" href="../src/ics/favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="../src/ics/favicon-16x16.png" sizes="16x16">
-		<link rel="manifest" href="../src/ics/manifest.json">
-		<link rel="mask-icon" href="../src/ics/safari-pinned-tab.svg" color="#dd0000">
-		<link rel="shortcut icon" href="../src/ics/favicon.ico">
-		<meta name="msapplication-config" content="../src/ics/browserconfig.xml">
+		<link rel="apple-touch-icon" sizes="180x180" href="../src/bcnics/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../src/bcnics/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../src/bcnics/favicon-16x16.png">
+		<link rel="manifest" href="../src/bcnics/site.webmanifest">
+		<link rel="mask-icon" href="../src/bcnics/safari-pinned-tab.svg" color="#777777">
+		<link rel="shortcut icon" href="../src/bcnics/favicon.ico">
+		<meta name="msapplication-TileColor" content="#eeeeee">
+		<meta name="msapplication-config" content="../src/bcnics/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
+		
 	</head>
 	<body>
 
 		<!-- Theme inputs (invisibles) -->		
-		<input type="radio" id="theme-light" name="theme" aria-hidden="true" hidden>
-		<input type="radio" id="theme-soft" name="theme" aria-hidden="true" hidden>
-		<input type="radio" id="theme-dark" name="theme" aria-hidden="true" hidden> 
+		<input type="radio" id="theme-nox" name="theme" aria-hidden="true" hidden>
+		<input type="radio" id="theme-vesperum" name="theme" aria-hidden="true" hidden>
+		<input type="radio" id="theme-meridianus" name="theme" aria-hidden="true" hidden>
+		<input type="radio" id="theme-aurora" name="theme" aria-hidden="true" hidden> 
 		
 		<!-- Page content -->		
 		<div id="page" data-mode="page">
 			<nav id="site-nav" class="nav-smart">
 				<div>
-					<a class="site-logo" href="index.html" title="BarcelonaCSS: Main">
-						<img src="../src/ics/android-chrome-192x192.png" alt="BarcelonaCSS logo">
+					<a class="site-logo" href="http://acozar.github.io/bcncss/" title="Barcelona CSS">
+						<img src="../src/bcnics/icon-bcn.png" alt="BCN CSS">
 					</a>
 					<input type="checkbox" id="mobnav" name="mobnav" aria-hidden="true" hidden> 
 					<strong><label for="mobnav">Menú<mark></mark></label></strong>
 					<div hidden>
-						<a href="index.html" title="BarcelonaCSS">BarcelonaCSS</a>
+						<a href="index.html" title="BCNCSS">BCNCSS</a>
 						<a href="styles.html" title="Styles">Styles</a>
+						<a href="grids.html" title="Grids">Grids</a>
 						<a href="layouts.html" title="Layouts">Layouts</a>
 						<a href="components.html" title="Components">Components</a>
 						<a href="extras.html" title="Extras">Extras</a>
@@ -67,7 +80,7 @@
 			<header id="page-header">
 				<div>
 					<h1>
-					 	BarcelonaCSS <br class="shown-phone"><small>styles</small>
+					 	<a href="">BCNCSS</a> <br class="shown-phone"><small>styles</small>
 					 </h1>
 				</div>
 			</header>
@@ -492,10 +505,10 @@
 						<hr>
 						<h3><u>Emphatic links</u></h3>					
 						<em><a href="starter.html" title="">em a</a></em>
-						<em><a href="starter.html" title=""><img src="../src/ics/icon-mini.png" alt="bcn CSS logo">em a img</a></em>
+						<em><a href="starter.html" title=""><img src="../src/ics/icon.png" alt="bcn CSS logo">em a img</a></em>
 						<em><a href="starter.html" title=""><svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g><path d="M 512,198.525L 335.11,172.821L 256,12.53l-79.108,160.291L0,198.525l 128,124.769L 97.784,499.47L 256,416.291l 158.216,83.179 l-30.217-176.176L 512,198.525z"></path></g></svg>em a svg</a></em><br><br>
 						<em><small><a href="starter.html" title="">em small a</a></small></em>
-						<em><small><a href="starter.html" title=""><img src="../src/ics/icon-mini.png" alt="bcn CSS logo"></a></small></em>
+						<em><small><a href="starter.html" title=""><img src="../src/ics/icon.png" alt="bcn CSS logo"></a></small></em>
 						<em><small><a href="starter.html" title=""><svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g><path d="M 512,198.525L 335.11,172.821L 256,12.53l-79.108,160.291L0,198.525l 128,124.769L 97.784,499.47L 256,416.291l 158.216,83.179 l-30.217-176.176L 512,198.525z"></path></g></svg></a></small></em><br><br>
 						<em><div><a href="starter.html" title="">em a div</a></div></em><br><br>
 						<hr>
@@ -517,7 +530,7 @@
 						<hr>
 						<h3><u>Emphatic labels</u></h3>								
 						<em><label>em label</label></em>
-						<em><label><img src="../src/ics/icon-mini.png" alt="bcn CSS logo">em label img</label></em>
+						<em><label><img src="../src/ics/icon.png" alt="bcn CSS logo">em label img</label></em>
 						<em><label><svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g><path d="M 512,198.525L 335.11,172.821L 256,12.53l-79.108,160.291L0,198.525l 128,124.769L 97.784,499.47L 256,416.291l 158.216,83.179 l-30.217-176.176L 512,198.525z"></path></g></svg>em label svg</label></em>
 						<hr>
 						<div class="collapser sample">
@@ -534,7 +547,7 @@
 						<hr>
 						<h3><u>Emphatic buttons</u></h3>								
 						<em><button>em button</button></em>
-						<em><button><img src="../src/ics/icon-mini.png" alt="bcn CSS logo">em button</button></em>
+						<em><button><img src="../src/ics/icon.png" alt="bcn CSS logo">em button</button></em>
 						<em><button><svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g><path d="M 512,198.525L 335.11,172.821L 256,12.53l-79.108,160.291L0,198.525l 128,124.769L 97.784,499.47L 256,416.291l 158.216,83.179 l-30.217-176.176L 512,198.525z"></path></g></svg>em button svg</button></em>
 						<hr>
 						<div class="collapser sample">
@@ -916,7 +929,7 @@
 			<footer id="page-footer">
 				<div>
 				
-					<p><a href="http://barcelonacss.github.io" title="BarcelonaCSS">BarcelonaCSS</a> by Acózar/Miralles, 2017. Distributed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. </p>
+					<p>© <a href="http://acozar.com" title="Acózar">Acózar</a> 2018. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. </p>
 					
 				</div>
 			</footer>
@@ -929,21 +942,22 @@
 		
 		<!-- Tools switcher -->  		
   		<div id="tools-switcher">
-  			<label for="tools-check" data-title="Tools" class="pophover">+</label>
+  			<label for="tools-check" data-title="Themes" class="pophover">&#9673;</label>
   		</div>
 		<!-- Tools nav -->
 		<input type="checkbox" id="tools-check" name="tools" aria-hidden="true" hidden>
 		<nav id="tools-nav">
-			<label for="tools-check" id="label-tools" data-title="Close" class="pophover">x</label>
-			<label for="theme-dark" id="label-dark" data-title="Dark theme" class="pophover"></label>
-			<label for="theme-soft" id="label-soft" data-title="Soft theme" class="pophover"></label>
-			<label for="theme-light" id="label-light" data-title="Light theme" class="pophover"></label>
+			<label for="tools-check" id="label-tools" data-title="Close" class="pophover">&#215;</label>
+			<label for="theme-nox" id="label-nox" data-title="Nox" class="pophover"></label>
+			<label for="theme-vesperum" id="label-vesperum" data-title="vesperum" class="pophover"></label>
+			<label for="theme-meridianus" id="label-meridianus" data-title="Meridianus" class="pophover"></label>
+			<label for="theme-aurora" id="label-aurora" data-title="Aurora" class="pophover"></label>
 		</nav>	
 
 
 		<!-- Scripts
 		================================================== -->
-		<script src="../src/js/ga.js" type="text/javascript"></script>
+		<script src="../src/scripts/ga.js" type="text/javascript"></script>
 	</body>
 </html>
 							
