@@ -29,5 +29,5 @@ HTML for content, CSS for design. No more needed.
 Lots of components and possibilities.
 
 
-by Acozar/Miralles
+by Acozar (www.acozar.com)
 Barcelona 2017
