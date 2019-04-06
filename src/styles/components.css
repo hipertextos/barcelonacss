@@ -98,6 +98,31 @@
 	from { opacity: 0; transform: translateX(100%); }
 }
 
+/* ------------------------------------------------------------ Basic animations */
+
+#site-nav {
+	-webkit-animation: moveFromLeftFade .7s ease both;
+	-moz-animation: moveFromLeftFade .7s ease both;
+	-o-animation: moveFromLeftFade .7s ease both;
+	animation: moveFromLeftFade .7s ease both;
+}
+#site-nav > div,
+#site-header,
+#page-header,
+#page-main,
+#page-nav,
+#page-section,
+#page-footer,
+[id*='page-section'],
+dialog {
+	-webkit-animation: fadeIn .7s ease both;
+	-moz-animation: fadeIn .7s ease both;
+	-o-animation: fadeIn .7s ease both;
+	animation: fadeIn .7s ease both;
+	-webkit-animation-delay: .7s;
+	-moz-animation-delay: .7s;
+	animation-delay: .7s;
+}
 
 /* ------------------------------------------------------------ Flex-grid */
 
@@ -168,7 +193,7 @@
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
 	[class*='flex-grid'] { display: block; }
 	[class*='flex-grid'] > * { display: block; width: 100%; }
 	[class*='flex-box'].flex-half > * { width: 49.5%; }
@@ -1181,6 +1206,7 @@ input:not(:checked) ~ .alert + em label {
 	animation: fadeIn 1s ease both;
 }
 [id*='lightbox']:target + a + figcaption {
+	color: #ffffff;
 	position: fixed;
 	bottom: 0; left: 0; right: 0;
 	height: 64px;
@@ -1282,7 +1308,7 @@ nav strong label mark {
 .cover {
 	background-position: top center;
 	background-attachment: fixed;
-	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	border:none;
 	color: #fff;
@@ -1314,8 +1340,9 @@ nav strong label mark {
 }
 @media (max-width: 767px) {
 	.banner {
+		background-size: 100%;
 		height: 320px;
-		padding-top: 128px;
+		padding-top: 96px;
 	}
 }
 

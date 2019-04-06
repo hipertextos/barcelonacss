@@ -861,11 +861,6 @@ section > div {
 	padding: 30px 0 15px;
 	position: relative;
 }
-dialog > div {
-	margin: 0 auto;
-	max-width: 1000px;
-	max-width: var(--page-size);
-}
 header {
 	border-bottom: thin solid currentColor;
 }
@@ -882,11 +877,12 @@ article, aside {
 #page-nav > div,
 #page-section > div,
 #page-footer > div,
-[id*='page-section'] > div {
+[id*='page-section'] > div,
+dialog > div {
 	margin: 0 auto;
 	position: relative;
 	width: 100%;
-	max-width: 1000px;
+	max-width: 1024px;
 	max-width: var(--page-size);
 }
 dialog header,
@@ -1095,12 +1091,12 @@ a:visited:active {
 }
 #theme-meridianus:checked ~ #page em a,
 #theme-meridianus:checked ~ #page em label,
-#theme-meridianus:checked ~ #page em button {
+#theme-meridianus:checked ~ #page em button,
+#theme-meridianus:checked ~ #page em a:visited {
 	background-color: var(--color-textmeridianus);
 	color: var(--color-white);	
 }
-#theme-meridianus:checked ~ #page a:visited,
-#theme-meridianus:checked ~ #page em a:visited {
+#theme-meridianus:checked ~ #page a:visited {
 	color: var(--color-textmeridianus);
 }
 #theme-meridianus:checked ~ #page label:hover,
@@ -1132,12 +1128,12 @@ a:visited:active {
 }
 #theme-vesperum:checked ~ #page em a,
 #theme-vesperum:checked ~ #page em label,
-#theme-vesperum:checked ~ #page em button {
+#theme-vesperum:checked ~ #page em button,
+#theme-vesperum:checked ~ #page em a:visited {
 	background-color: var(--color-textvesperum);
 	color: var(--color-white);	
 }
-#theme-vesperum:checked ~ #page a:visited,
-#theme-vesperum:checked ~ #page em a:visited {
+#theme-vesperum:checked ~ #page a:visited {
 	color: var(--color-textvesperum);
 }
 #theme-vesperum:checked ~ #page label:hover,
