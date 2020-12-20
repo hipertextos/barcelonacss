@@ -41,6 +41,10 @@ html {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
+.no-js {
+	display: none;
+	visibility: hidden;
+}
 body {
 	background-color: var(--color-white);
 	color: var(--color-black);
@@ -697,7 +701,7 @@ em div a {
 	display: block;
 	text-decoration: none;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
 	nav [data-mode=menu] em label {
 		display: block;
 		width: 100%;
@@ -824,7 +828,7 @@ nav label {
 
 /* Nav small devices */
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
 	nav {
 		text-align: center;
 	}
@@ -2615,13 +2619,16 @@ nav strong label mark {
 	color: #000;
 	display: block;
 	float: right;
-	margin: 0 8px 8px;
+	margin: 0 8px 0px;
 	padding: 0;
 	text-align: center;
 	text-decoration: none;
 	line-height: 44px;
 	height: 48px;
 	width: 48px;
+}
+#tools-switcher label {
+	margin: 0 10px 16px;
 }
 #tools-nav #label-aurora { background-color: #fff; }
 #tools-nav #label-meridianus { background-color: rgba(255,245,238,1); }
